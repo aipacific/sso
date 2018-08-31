@@ -7,7 +7,7 @@
 - Kiểu này ứng dụng chỉ sử dụng SSO như một cổng để login, logout. Phần phân quyền vẫn nằm nội bộ trên ứng dụng chứ không qua hệ thống phân quyền tập trung.
 - Giả sử ứng dụng [A] cần authen dùng SSO. Lồng xử lý đăng nhập trên web (trên App sẽ khác) sẽ như sau: **User truy cập ứng dụng [A] --> [A] redirect qua SSO đăng nhập --> SSO thực hiện đăng nhập --> đẩy kết quả cùng user-token về cho [A]. Việc còn lại [A] tự lo.**
 - Từ user-token trả về từ SSO, gọi qua JWT để lấy thông tin user. Thông tin này gồm địa chỉ email. [A] sẽ dùng email này để map vào với user nội bộ của [A]
-- Cách gọi jwt như sau: `https://jwt.aipacific.vn/auth/auth?_mod=auth&_act=user&_renderer=module&AppToken=<app-token của ứng dụng [A]>`
+- Cách gọi jwt như sau: `https://jwt.aipacific.vn/auth/auth?_mod=auth&_act=user&_renderer=module&AppToken=<app-token của ứng dụng [A]>`. Trang test tương ứng `http://tjwt.aipacific.tech`
 - Xem chi tiết ở mục **2.** bên dưới
 
 #### 1.2. Kiểu Sessionless
