@@ -1,5 +1,5 @@
 ### 1. Đăng nhập/đăng xuất thông qua SSO
-- Trang single-sign-on tại địa chỉ `https://id.aipacific.vn/sso/SSO/`
+- Trang single-sign-on tại địa chỉ `https://id.aipacific.vn/sso/SSO/`. Trang test tương ứng `http://tsso.aipacific.tech/sso/SSO/`
 - Trang chứng thực và phân quyền tập trung tại địa chỉ `https://jwt.aipacific.vn`
 - Các ứng dụng cần chứng thực SSO có thể theo kiểu Sessionless hoặc theo kiểu dùng Session nội bộ (như thông thường).
 
