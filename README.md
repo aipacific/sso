@@ -17,8 +17,8 @@
 
 #### 1.3. Các tham số khi gọi SSO và kết quả trả về từ SSO
 - đường dẫn cụ thể `https://id.aipacific.vn/sso/SSO/?_act=authen`. Đồng thời cần thêm 2 tham số như mô tả sau:
-- `redirect`: sau khi SSO chứng thực thành công sẽ redirect tới (tham số bắt buộc)
-- `callback`: nếu người dùng không muốn thực hiện chứng thực nữa sẽ trở lại trang này (tham số này optional)
+- `callback`: sau khi SSO chứng thực thành công sẽ redirect tới (tham số bắt buộc)
+- `redirect`: nếu người dùng không muốn thực hiện chứng thực nữa sẽ trở lại trang này (tham số này optional)
 - các tham số này có thể truyền qua POST hoặc GET
 - giá trị của cả 2 tham số trên cần được mã (1 lần) bằng base64
 - ví dụ (PHP) `'https://id.aipacific.vn/sso/SSO/?_act=authen&redirect='.base64_encode('abc.com/dashboard').'&callback='.base64_encode('abc.com')`. Sử dụng link này để target tới SSO. SSO thực hiện chứng thực thành công sẽ gọi ngược lại như sau `abc.com/dashboard&token=<user-token được cấp>`
